@@ -28,15 +28,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2   |  3  |  4  |  5    |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      | BT1 | BT2  | BT3 | BT4 | BT5   |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT | TOG | BT   | USB |     | BT_CLR|   |     |     |     |     |     |      |
-//                     | GUI |     | SPC   |   | ENT |     | ALT |
+// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT | TOG |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp ESC    &kp  N1       &kp  N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8 &kp N9    &kp N0 &kp BSPC
-   &none     &bt  BT_SEL 0 &bt  BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN  &kp UP &kp RIGHT &none &none
-   &kp LSHFT  &out OUT_TOG  &out OUT_BLE  &out OUT_USB &bt BT_CLR  &bt BT_CLR         &none   &none    &none &none    &none &none
-                    	                &none       &none       &kp LGUI       &kp RET  &kp SPACE &kp RALT
+   &trans     &bt  BT_CLR   &bt  BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN  &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &out OUT_TOG  &out OUT_BLE  &out OUT_USB &trans       &trans         &trans   &trans    &trans &trans    &trans &trans
+                    	                &trans       &trans       &kp LGUI       &kp RET  &kp SPACE &kp RALT
                         >;
                 };
 
@@ -48,9 +48,9 @@
 //                    |     |     | GUI |   | ENT | SPC | ALT |
                         bindings = <
    &kp  ESC  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &bt BT_CLR   &none &none   &none   &none      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &none   &none &none   &none   &none      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &none   &none   &kp LGUI    &kp RET   &kp SPACE &kp RALT
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                    	     &trans   &trans   &kp LGUI    &kp RET   &kp SPACE &kp RALT
                         >;
                 };
         };
